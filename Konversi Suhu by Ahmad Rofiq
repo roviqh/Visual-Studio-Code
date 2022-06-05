@@ -1,0 +1,111 @@
+from ast import Break, If
+
+konversi = True
+while konversi :
+    print(20*"*")
+    print("Konversi Suhu by Ahmad Rofiq")
+    print(20*"*"+"\n")
+    print("Masukkan Besaran Suhu :\na. Celcius\nb. Reamur\nc. Farenheit\nd. Kelvin\n")
+    suhu1 = input("Masukkan Besaran 1 : ")
+    while suhu1 :
+        if suhu1 == "":
+            suhu1 = input("Masukkan Besaran 1 : ")
+        elif suhu1 =="A" or suhu1=="a":
+            suhu2 = input("Masukkan Besaran 2 : ")
+            while suhu2 :
+                if suhu2 == "":
+                    suhu2 = input("Masukkan Besaran 2 : ")
+                elif suhu2=="B" or suhu2=="b":
+                    nc = int(input("Masukkan Nilai Celcius : "))
+                    nr = (4*nc)/5
+                    print(f"\nHasilnya : {nr} K\n")
+                    break
+                elif suhu2=="C" or suhu2=="c":
+                    nc = int(input("Masukkan Nilai Celcius : "))
+                    nf = ((9*nc)/5)+32
+                    print(f"\nHasilnya : {nf} K\n")
+                    break
+                elif suhu2=="D" or suhu2=="d":
+                    nc = int(input("Masukkan Nilai Celcius : "))
+                    nk = nc+273
+                    print(f"\nHasilnya : {nk} K\n")
+                    break
+                elif suhu2=="stop":
+                    konversi=False
+                    break
+                else:
+                    suhu2 = input("Masukkan Besaran 2 : ")
+            break
+        elif suhu1 =="B" or suhu1=="b":
+            suhu2 = input("Masukkan Besaran 2 : ")
+            while suhu2:
+                if suhu2 == "":
+                    suhu2 = input("Masukkan Besaran 2 : ")
+                elif suhu2=="A" or suhu2=="a":
+                    nr = int(input("Masukkan Nilai Reamur : "))
+                    nc = (5*nr)/4
+                    print(f"\nHasilnya : {nc} K\n")
+                    break
+                elif suhu2=="C" or suhu2=="c":
+                    nr = int(input("Masukkan Nilai Reamur : "))
+                    nf = ((9*nr)/4)+32
+                    print(f"\nHasilnya : {nf} K\n")
+                    break
+                elif suhu2=="D" or suhu2=="d":
+                    nr = int(input("Masukkan Nilai Reamur : "))
+                    nk = ((5*nr)/4)+273
+                    print(f"\nHasilnya : {nk} K\n")
+                    break
+                elif suhu2=="stop":
+                    konversi=False
+                    break
+                else:
+                    suhu2 = input("Masukkan Besaran 2 : ")
+            break
+        elif suhu1 =="C" or suhu1=="c":
+            suhu2 = input("Masukkan Besaran 2 : ")
+            while suhu2:
+                if suhu2 == "":
+                    suhu2 = input("Masukkan Besaran 2 : ")
+                elif suhu2=="A" or suhu2=="a":
+                    nf = int(input("Masukkan Nilai Farenheit : "))
+                    nc = (5*(nf-32))/9
+                    print(f"\nHasilnya : {nc} K\n")
+                    break
+                elif suhu2=="B" or suhu2=="b":
+                    nf = int(input("Masukkan Nilai Farenheit : "))
+                    nr = (4*(nf-32))/9
+                    print(f"\nHasilnya : {nr} K\n")
+                    break
+                elif suhu2=="stop":
+                    konversi=False
+                    break
+                else:
+                    suhu2 = input("Masukkan Besaran 2 : ")
+            break
+        elif suhu1 =="D" or suhu1=="d":
+            suhu2 = input("Masukkan Besaran 2 : ")
+            while suhu2:
+                if suhu2 == "":
+                    suhu2 = input("Masukkan Besaran 2 : ")
+                elif suhu2=="A" or suhu2=="a":
+                    nk = int(input("Masukkan Nilai Kelvin : "))
+                    nc = nk-273
+                    print(f"\nHasilnya : {nc} K\n")
+                    break
+                elif suhu2=="B" or suhu2=="b":
+                    nk = int(input("Masukkan Nilai Kelvin : "))
+                    nr = (4*(nk-273))/5
+                    print(f"\nHasilnya : {nr} K\n")
+                    break
+                elif suhu2=="stop":
+                    konversi=False
+                    break
+                else:
+                    suhu2 = input("Masukkan Besaran 2 : ")
+            break
+        elif suhu1=="stop":
+            konversi=False
+            break
+        else:
+            suhu1 = input("Masukkan Besaran 1 : ")
